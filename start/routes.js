@@ -18,3 +18,9 @@ const Route = use('Route')
 Route.get('/', ({ request }) => {
   return { greeting: 'Hello world in JSON' }
 })
+
+Route.get('customers', 'CustomerController.index')
+Route.post('customers', 'CustomerController.store')
+Route.get('customers/:id', 'CustomerController.show')
+Route.patch('customers/:id', 'CustomerController.update')
+Route.delete('customers/:id', 'CustomerController.destroy')
